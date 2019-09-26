@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // Store 'mongoose.connection' in Variable Called "db".
 const db = mongoose.connection;
 // Connect This File To My DataBase.
-mongoose.connect('mongodb://localhost/9an3ah-users', { useNewUrlParser: true })
+mongoose.connect('mongodb://sana:a1234567@ds117348.mlab.com:17348/sana', { useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => {
     console.log('Mongoose Connected Successfully *.*');
     console.log('__________________________________________________')
