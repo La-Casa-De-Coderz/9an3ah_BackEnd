@@ -97,7 +97,7 @@ let addNewWorker = (newWorker, callBack) => {
     if (error) {
       callBack(error)
     } else {
-      getWorkers(callBack)
+      callBack(response)
     }
   })
 }
@@ -138,6 +138,15 @@ let deleteWorkerAccount = (workerID, callBack) => {
   })
 }
 
+const auth = (user, cb) => {
+  console.log("DB USER:", user);
+
+  Workers.find(user, (err, data) => {
+    if(err) cb(err)
+    cb(data);
+  })
+}
+
 // Export Our "Database Methods" To Deal With It In Our "Express Server".
 module.exports = {
   getWorkers,
@@ -145,5 +154,6 @@ module.exports = {
   updateWorkerInfo,
   deleteWorkerAccount,
   findWorkers,
-  findOneWorker
+  findOneWorker,
+  auth
 }
