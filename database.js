@@ -97,7 +97,7 @@ let addNewWorker = (newWorker, callBack) => {
     if (error) {
       callBack(error)
     } else {
-      getWorkers(callBack)
+      callBack(response)
     }
   })
 }
