@@ -6,16 +6,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// let filterSearch = (searchObject) => {
-//   if (searchObject.name === '') {
-//     delete searchObject.name;
-//   } else if (searchObject.location === '') {
-//     delete searchObject.location
-//   } else if (searchObject.category === '') {
-//     delete searchObject.category
-//   }
-//   return searchObject;
-// }
 
 // @GET
 // Return All Workers From Database
